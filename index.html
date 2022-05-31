@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+</head>
+<body>
+
+    <main>
+        <header>
+            <div class="title">
+                <img src="icon/wlogo.png"  width="35px">
+               <center> <h1>WhatsApp</h1></center>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <img src="icon/navlogo.png" width="50px">
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                   
+                    
+                    <h3 class="users-count"></h3>
+                </div>
+                <div class="users-list">
+                    
+                </div>
+            </div>
+            <div class="chat-window">
+                
+                
+                <div class="chats">
+                   
+                   
+                    
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text"  placeholder="Type your message...">
+                    <button type="button" id="user-send">SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        var uwindow = document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display=='block'){
+                uwindow.style.display='none';
+            }
+            else{
+                uwindow.style.display='block';
+            }
+        }
+
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+
+</html>
